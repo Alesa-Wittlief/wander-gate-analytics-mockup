@@ -1,0 +1,187 @@
+<style>
+  .wd-root {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #14181D;
+    color: #E8E6E1;
+    padding: 32px 28px;
+    border-radius: 4px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .wd-num {
+    font-family: 'IBM Plex Mono', 'SF Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .wd-banner {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: #F5A623;
+    border: 1px solid #3A3126;
+    background: #211C15;
+    padding: 6px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 22px;
+  }
+  .wd-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #FFFFFF;
+  }
+  .wd-sub {
+    font-size: 13px;
+    color: #8A8F98;
+    margin: 0 0 26px 0;
+  }
+  .wd-kpi-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .wd-kpi {
+    flex: 1;
+    min-width: 150px;
+    background: #1B2027;
+    border: 1px solid #262C34;
+    border-radius: 6px;
+    padding: 16px 18px;
+  }
+  .wd-kpi-label {
+    font-size: 11px;
+    color: #8A8F98;
+    margin-bottom: 8px;
+  }
+  .wd-kpi-value {
+    font-size: 30px;
+    font-weight: 600;
+    color: #F5A623;
+    line-height: 1;
+  }
+  .wd-kpi-value.dim { color: #E8E6E1; }
+  .wd-kpi-target {
+    font-size: 11px;
+    color: #5FA88A;
+    margin-top: 6px;
+  }
+  .wd-section-label {
+    font-size: 12px;
+    color: #8A8F98;
+    margin: 24px 0 10px 0;
+  }
+  .wd-chart-box {
+    background: #1B2027;
+    border: 1px solid #262C34;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+  .wd-funnel-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 0;
+    border-bottom: 1px solid #20252C;
+    font-size: 13px;
+  }
+  .wd-funnel-row:last-child { border-bottom: none; }
+  .wd-funnel-label { width: 150px; color: #C7C9CE; flex-shrink: 0; }
+  .wd-funnel-bar-track { flex: 1; background: #20252C; border-radius: 3px; height: 10px; overflow: hidden; }
+  .wd-funnel-bar-fill { height: 100%; background: #F5A623; }
+  .wd-funnel-n { width: 40px; text-align: right; color: #8A8F98; }
+</style>
+
+<div class="wd-root">
+  <div class="wd-banner">MOCK DATA — illustrative only, not connected to production</div>
+  <div class="wd-title">Wander — delay-response metrics</div>
+  <div class="wd-sub">Users experiencing a 60+ minute delay, last 20 days (simulated)</div>
+
+  <div class="wd-kpi-row">
+    <div class="wd-kpi">
+      <div class="wd-kpi-label">North star: adoption rate</div>
+      <div class="wd-kpi-value">36.8%</div>
+      <div class="wd-kpi-target">target: 40%</div>
+    </div>
+    <div class="wd-kpi">
+      <div class="wd-kpi-label">Prompts shown</div>
+      <div class="wd-kpi-value dim">171</div>
+    </div>
+    <div class="wd-kpi">
+      <div class="wd-kpi-label">Venue selected</div>
+      <div class="wd-kpi-value dim">37</div>
+    </div>
+    <div class="wd-kpi">
+      <div class="wd-kpi-label">Directions viewed</div>
+      <div class="wd-kpi-value dim">28</div>
+    </div>
+  </div>
+
+  <div class="wd-section-label">Funnel — all qualifying delays</div>
+  <div class="wd-chart-box">
+    <div class="wd-funnel-row">
+      <div class="wd-funnel-label">Delay detected</div>
+      <div class="wd-funnel-bar-track"><div class="wd-funnel-bar-fill" style="width:100%"></div></div>
+      <div class="wd-funnel-n">190</div>
+    </div>
+    <div class="wd-funnel-row">
+      <div class="wd-funnel-label">Prompt shown</div>
+      <div class="wd-funnel-bar-track"><div class="wd-funnel-bar-fill" style="width:90%"></div></div>
+      <div class="wd-funnel-n">171</div>
+    </div>
+    <div class="wd-funnel-row">
+      <div class="wd-funnel-label">Prompt engaged</div>
+      <div class="wd-funnel-bar-track"><div class="wd-funnel-bar-fill" style="width:33%"></div></div>
+      <div class="wd-funnel-n">63</div>
+    </div>
+    <div class="wd-funnel-row">
+      <div class="wd-funnel-label">Venue selected</div>
+      <div class="wd-funnel-bar-track"><div class="wd-funnel-bar-fill" style="width:19%"></div></div>
+      <div class="wd-funnel-n">37</div>
+    </div>
+    <div class="wd-funnel-row">
+      <div class="wd-funnel-label">Directions viewed</div>
+      <div class="wd-funnel-bar-track"><div class="wd-funnel-bar-fill" style="width:15%"></div></div>
+      <div class="wd-funnel-n">28</div>
+    </div>
+  </div>
+
+  <div class="wd-section-label">Adoption rate by airport</div>
+  <div class="wd-chart-box">
+    <canvas id="wd-airport-chart" height="140"></canvas>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script>
+(function() {
+  var data = [
+    {airport: "SEA", pct: 50.0},
+    {airport: "ATL", pct: 38.7},
+    {airport: "LAX", pct: 38.5},
+    {airport: "ORD", pct: 32.3},
+    {airport: "DIA", pct: 26.3}
+  ];
+  var ctx = document.getElementById('wd-airport-chart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: data.map(function(d){return d.airport;}),
+      datasets: [{
+        data: data.map(function(d){return d.pct;}),
+        backgroundColor: '#F5A623',
+        borderRadius: 3,
+        barThickness: 34
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, max: 60, grid: { color: '#20252C' }, ticks: { color: '#8A8F98', callback: function(v){return v + '%';} } },
+        x: { grid: { display: false }, ticks: { color: '#C7C9CE' } }
+      }
+    }
+  });
+})();
+</script>
