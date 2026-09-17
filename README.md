@@ -1,6 +1,6 @@
 # 🚀 Wander Gate-Delay Mockup Analytics
 
-Build Status: 1st iteration complete with mockup dashboard, tables, SQLite commands
+Build Status: 2nd iteration complete with mockup dashboard, tables, SQLite commands
 
 This repo contains a mock event log for Wander's delay-response feature, SQL queries demonstrating SELECT/WHERE/JOIN/GROUP BY against that data, and a rough dashboard mockup visualizing the north-star adoption metric and funnel. Built to understand what's cheap vs. expensive to measure before handing this off to a real data team.
 
@@ -15,6 +15,10 @@ of offering solutions, showing an approximate wait-time, but won't track locatio
 The easiest and cheapest option to build the first iteration of this app were to focus on 5 airports - DIA, ORD, ATL, LAX, SEA. When a traveler checks in early or is delayed and shows a wait-time of 60+ minutes, the first prompt pops up. The traveler is prompted to enter their gate #, then options to dine, rest, etc pop up with approximate 'walk to' times. No tracking with maps will be applied at this time. 
 
 Measurements of success: Would like to see an adoption rate of 40%. See mockup dashboard. 
+
+UPDATE: The easiest option ended up not being the favored method of deployment as the measurements for success were much harder to obtain and less trust worthy than a middle approach that addresses the need for success measurements of app. While maintaining privacy for users, I decided to deploy an opt-in feature that tracks the flight information for single-use opt-in. The user checks in for the flight, enters flight #, and with permissions allows Wander to track the flight and gate # with the sole purpose of offering entertainment/food options should the user encounter wait time at the gate of more than 60 minutes.
+
+The new mockup dashboard shows an adoption rate of 60% - highly successful as the goal was 40%.
 
 # Built With
 - **Language:** SQLite and HTML
